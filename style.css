@@ -1,0 +1,51 @@
+#gameContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game{
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    overflow: hidden;
+ }
+ 
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    animation: 3.5s infinite slide linear;
+    position: relative;
+    z-index: 1;
+}
+
+#obstacle{
+    width: 50px;
+    height: 500px;
+    background-color: black;
+    animation: 3.5s infinite slide linear;
+    position: relative;
+    top: -150px;
+    z-index: 0;
+}
+
+#character{
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: relative;
+    top: -250px;
+    left: 50px;
+    z-index: 2;
+    border-radius: 50px;
+    animation: 3.5s infinite birdFall linear;
+}
+
+@keyframes slide {
+    0% {left: 500px;}
+    100% {left: -50px ;}
+  }
+
+
